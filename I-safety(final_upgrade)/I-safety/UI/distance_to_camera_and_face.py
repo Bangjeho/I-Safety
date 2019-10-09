@@ -24,6 +24,8 @@ import cv2
 import math
 import threading
 import sys
+import pandas as pd
+from datetime import datetime
 
 check_list = [0]
 ambient_light = [51]
@@ -68,7 +70,6 @@ def get_brightness_value():
 
 # face_dectection and find distance with eye and camera, control brightness
 def face_detection(label):
-
     count = 1
     distance = 0.0
     font = cv2.FONT_HERSHEY_SIMPLEX
@@ -87,10 +88,14 @@ def face_detection(label):
 
     # sleep for 5 minute after image capture
         if count % 61 == 0:
+            data = pd.read_csv('data.csv')
             brights = define_brights(distance,ambient_light)
             brightness_control(brights)
             getbrightness[0] = brights
-            label.setText("Brightness: "+str(brights) +" lumens    ")
+            label.setText("      Distance : "+ str(distance)+" cm             "+"Brightness : "+str(brights) +" lumens")
+            k = len(data)
+            data.loc[k] = [datetime.now().strftime('%Y'),datetime.now().strftime('%m'),datetime.now().strftime('%d'),distance]
+            data.to_csv(R'C:\Users\entity\Desktop\I-safety\UI\data.csv',header = True, index = False)
             break
 
         # Caputure a single frame
@@ -111,7 +116,6 @@ def face_detection(label):
 
         cv2.imshow('face detection', frame)
         count += 1
-        print("D:  %d " %(distance))
     
     # Stop the capture
     cap.release()

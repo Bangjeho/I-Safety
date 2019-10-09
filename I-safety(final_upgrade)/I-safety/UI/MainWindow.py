@@ -6,14 +6,13 @@
 
 import sys
 from PyQt5.QtWidgets import *
-from PyQt5 import uic
+from PyQt5 import uic,QtGui
 from PyQt5.QAxContainer import *
 from PyQt5.QtGui import *
 import distance_to_camera_and_face as dtc
 import eye_blink_detection as ebd
 import time as t
-import DryEyeSyndromeWindow
-
+import image_making as im
 
 # In[2]:
 
@@ -30,27 +29,27 @@ class MainWindow(QMainWindow,form_class):
         self.setupUi(self)
         self.pushButton.clicked.connect(self.OnOffButtonClick)
         self.horizontalSlider.valueChanged.connect(self.ambient_light_control)
-#         self.pushButton_3.clicked.connect(self.self_eye_test)
         self.pushButton_3.clicked.connect(self.open_DiagnosisWindow)
+        self.pushButton_2.clicked.connect(self.open_dataAnalysisWindow)
         
-#     def brightness_control(self):
-#         brightness = dtc.get_brightness_value()
-#         self.label_7.setText(str(brightness[0]) + ' lx')
+    def open_dataAnalysisWindow(self):
+        from DataAnalysisWindow import DataAnalysisWindow
+        self.daw = DataAnalysisWindow()
+        self.daw.show()
+        im.set_date(self.daw.label_2.text(),self.daw.label.text())
+        im.setting_database(self.daw.label_4)
+        self.daw.label_4.setPixmap(QtGui.QPixmap('analysis_image.png.'))
+        self.hide()
+        
     def open_DiagnosisWindow(self):
         from DryEyeSyndromeWindow import DryEyeSyndromeWindow
-        self.DiagnosisWindow = DryEyeSyndromeWindow()
-        self.DiagnosisWindow.show()
-        self.hide()
-    def self_eye_test(self):
         if self.pushButton.isChecked():
             self.pushButton.setChecked(False)
             dtc.check(-1)
-            t.sleep(1)
-        ebd.Run()
-#         t.sleep(10)
-        time = ebd.get_time()
+        self.DiagnosisWindow = DryEyeSyndromeWindow()
+        self.DiagnosisWindow.show()
+        self.hide()
         
-        print('time:',time[0])
     def OnOffButtonClick(self):
         if self.pushButton.isChecked():
             dtc.check(1)
@@ -68,6 +67,7 @@ if __name__ == "__main__":
     myApp = MainWindow()
     myApp.show()
     app.exec()
+        
         
 
 

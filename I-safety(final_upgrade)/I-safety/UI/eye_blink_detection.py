@@ -89,7 +89,6 @@ def eye_blink_detect():
             key = cv2.waitKey(1) & 0xFF
             # When key 'Q' is pressed, exit
             if timer_check == 1 :
-#             if key is ord('q'):
                 break
 
     # release all resources
@@ -108,7 +107,6 @@ def timer():
             break
         else:
             time[0] = i
-            print(time[0])
             t.sleep(1)
 
 def get_time():

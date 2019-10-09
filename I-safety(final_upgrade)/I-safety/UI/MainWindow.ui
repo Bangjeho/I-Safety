@@ -41,7 +41,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>icon.png</normaloff>icon.png</iconset>
+    <normaloff>../Image/images.jpg</normaloff>../Image/images.jpg</iconset>
   </property>
   <property name="layoutDirection">
    <enum>Qt::LeftToRight</enum>
@@ -85,14 +85,14 @@ border:0px;</string>
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>../../Desktop/I-safery(document)/i_safety_Ui_image/OFF.png</normaloff>
-     <normalon>../../Desktop/I-safery(document)/i_safety_Ui_image/ON.png</normalon>
-     <disabledoff>../../Desktop/I-safery(document)/i_safety_Ui_image/OFF.png</disabledoff>
-     <disabledon>../../Desktop/I-safery(document)/i_safety_Ui_image/ON.png</disabledon>
-     <activeoff>../../Desktop/I-safery(document)/i_safety_Ui_image/OFF.png</activeoff>
-     <activeon>../../Desktop/I-safery(document)/i_safety_Ui_image/ON.png</activeon>
-     <selectedoff>../../Desktop/I-safery(document)/i_safety_Ui_image/OFF.png</selectedoff>
-     <selectedon>../../Desktop/ON.png</selectedon>../../Desktop/I-safery(document)/i_safety_Ui_image/OFF.png</iconset>
+     <normaloff>../Image/OFF.png</normaloff>
+     <normalon>../Image/ON.png</normalon>
+     <disabledoff>../Image/OFF.png</disabledoff>
+     <disabledon>../Image/ON.png</disabledon>
+     <activeoff>../Image/OFF.png</activeoff>
+     <activeon>../Image/ON.png</activeon>
+     <selectedoff>../Image/OFF.png</selectedoff>
+     <selectedon>../Image/ON.png</selectedon>../Image/OFF.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -482,7 +482,7 @@ QPushButton:hover
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>analysis icon.png</normaloff>analysis icon.png</iconset>
+     <normaloff>../Image/analysis icon.png</normaloff>../Image/analysis icon.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -595,10 +595,10 @@ color:rgb(0, 170, 255);</string>
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>   Blightness : 0 lumens    </string>
+    <string>      Distance : 0 cm             Blightness : 0 lumens</string>
    </property>
    <property name="alignment">
-    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLabel" name="label_8">
@@ -667,7 +667,7 @@ QPushButton:hover
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>Dry Eye Syndrome Self Diagnosis icon.jpg</normaloff>Dry Eye Syndrome Self Diagnosis icon.jpg</iconset>
+     <normaloff>../Image/Dry Eye Syndrome Self Diagnosis icon.jpg</normaloff>../Image/Dry Eye Syndrome Self Diagnosis icon.jpg</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -830,6 +830,22 @@ background-color:rgb(255, 255, 255);</string>
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
+  <widget class="Line" name="line_3">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>390</y>
+     <width>3</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
   <zorder>label_6</zorder>
   <zorder>label</zorder>
   <zorder>label_2</zorder>
@@ -848,6 +864,7 @@ background-color:rgb(255, 255, 255);</string>
   <zorder>pushButton_3</zorder>
   <zorder>line_8</zorder>
   <zorder>label_4</zorder>
+  <zorder>line_3</zorder>
  </widget>
  <resources/>
  <connections/>

@@ -149,7 +149,7 @@ border:0px;</string>
     <number>1</number>
    </property>
    <property name="text">
-    <string>   Program On/Off</string>
+    <string>   프로그램 켜기/끄기</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -210,7 +210,7 @@ border:0px;</string>
     <number>1</number>
    </property>
    <property name="text">
-    <string>   Ambient Light Control</string>
+    <string>   주변 밝기 조절</string>
    </property>
   </widget>
   <widget class="Line" name="line">
@@ -460,10 +460,14 @@ border:0px;</string>
      <pointsize>10</pointsize>
      <weight>75</weight>
      <bold>true</bold>
+     <stylestrategy>PreferDefault</stylestrategy>
     </font>
    </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::DefaultContextMenu</enum>
+   </property>
    <property name="layoutDirection">
-    <enum>Qt::LeftToRight</enum>
+    <enum>Qt::RightToLeft</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton
@@ -478,11 +482,7 @@ QPushButton:hover
 </string>
    </property>
    <property name="text">
-    <string>Data Analysis                                           &gt;</string>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>../Image/analysis icon.png</normaloff>../Image/analysis icon.png</iconset>
+    <string>사용한 거리 평균 보기                                         </string>
    </property>
    <property name="iconSize">
     <size>
@@ -595,7 +595,7 @@ color:rgb(0, 170, 255);</string>
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>      Distance : 0 cm             Blightness : 0 lumens</string>
+    <string>거리 : 0 cm                       밝기 : 0 lumens</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -663,11 +663,7 @@ QPushButton:hover
 </string>
    </property>
    <property name="text">
-    <string>Dry Eye Syndrome Self Diagnosis            &gt;</string>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>../Image/Dry Eye Syndrome Self Diagnosis icon.jpg</normaloff>../Image/Dry Eye Syndrome Self Diagnosis icon.jpg</iconset>
+    <string>안구건조증 셀프 진단                                          </string>
    </property>
    <property name="iconSize">
     <size>
@@ -698,7 +694,7 @@ QPushButton:hover
 color:rgb(0, 170, 255);</string>
    </property>
    <property name="text">
-    <string>Diagnosis</string>
+    <string>진단</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>

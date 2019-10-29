@@ -30,6 +30,7 @@ class SelfSurveyWindow(QMainWindow,form_class):
         self.checkBox_4.clicked.connect(self.Checked)
         self.checkBox_5.clicked.connect(self.Checked)
         self.checkBox_6.clicked.connect(self.Checked)
+        self.checkBox_7.clicked.connect(self.Checked)
         
     def setUI(self):
         self.setupUi(self)

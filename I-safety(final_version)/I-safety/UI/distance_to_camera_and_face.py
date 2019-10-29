@@ -58,11 +58,14 @@ def define_brights(distance,ambient_light):
         brights = 20
     else:
         if distance <= 30 and distance >= 0 :
-            brights = 30
+            brights = 20
         elif distance > 30 and distance <= 60 :
+            brights = 30
+        elif distance > 60 and distance <= 90 :
             brights = 40
-        elif distance > 60:
+        elif distance > 90 :
             brights = 50
+
     return brights
 
 def get_brightness_value():
@@ -86,7 +89,7 @@ def face_detection(label):
         if check_list[0] == -1:
             sys.exit()
 
-    # sleep for 5 minute after image capture
+    # sleep for 10 minute after image capture
         if count % 61 == 0:
             data = pd.read_csv('data.csv')
             brights = define_brights(distance,ambient_light)
@@ -95,7 +98,7 @@ def face_detection(label):
             label.setText("      Distance : "+ str(distance)+" cm             "+"Brightness : "+str(brights) +" lumens")
             k = len(data)
             data.loc[k] = [datetime.now().strftime('%Y'),datetime.now().strftime('%m'),datetime.now().strftime('%d'),distance]
-            data.to_csv(R'C:\Users\entity\Desktop\I-safety\UI\data.csv',header = True, index = False)
+            data.to_csv(R'C:\Users\entity\Desktop\I-Safety\I-safety(final_version)\I-safety\UI\data.csv',header = True, index = False)
             break
 
         # Caputure a single frame

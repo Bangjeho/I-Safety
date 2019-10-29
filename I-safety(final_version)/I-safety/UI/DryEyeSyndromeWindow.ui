@@ -252,18 +252,7 @@ background-color:rgb(255, 255, 255);</string>
 border:0px;</string>
    </property>
    <property name="text">
-    <string>Catch eye Blink                                        &gt;</string>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>../Image/cute_cow-07-512.png</normaloff>
-     <normalon>../Image/cute_cow-04-512.png</normalon>
-     <disabledoff>../Image/cute_cow-07-512.png</disabledoff>
-     <disabledon>../Image/cute_cow-04-512.png</disabledon>
-     <activeoff>../Image/cute_cow-07-512.png</activeoff>
-     <activeon>../Image/cute_cow-04-512.png</activeon>
-     <selectedoff>../Image/cute_cow-07-512.png</selectedoff>
-     <selectedon>../Image/cute_cow-04-512.png</selectedon>../Image/cute_cow-07-512.png</iconset>
+    <string>눈 깜빡임 20초 버티기 테스트</string>
    </property>
    <property name="iconSize">
     <size>
@@ -305,11 +294,7 @@ QPushButton:hover
 </string>
    </property>
    <property name="text">
-    <string>Self Survey                                                &gt; </string>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>../Image/1.jpg</normaloff>../Image/1.jpg</iconset>
+    <string>설문조사</string>
    </property>
    <property name="iconSize">
     <size>
